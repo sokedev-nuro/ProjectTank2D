@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccpurm7bb41ee"]
+
+[ext_resource type="Texture2D" uid="uid://bbbwrg32xk76x" path="res://assets/graphics/map/big_building_prototype.png" id="1_mov6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhv5t"]
+size = Vector2(899.5, 23.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcuc0"]
+size = Vector2(21.1134, 85.9614)
+
+[node name="big_building_prot_flipped" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_mov6r")
+flip_h = true
+
+[node name="CollisionShapeTop" type="CollisionShape2D" parent="."]
+position = Vector2(-48, 104)
+shape = SubResource("RectangleShape2D_jhv5t")
+
+[node name="CollisionShapeBottom" type="CollisionShape2D" parent="."]
+position = Vector2(78, 463)
+shape = SubResource("RectangleShape2D_jhv5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-387, 408)
+rotation = -0.349066
+shape = SubResource("RectangleShape2D_jcuc0")
